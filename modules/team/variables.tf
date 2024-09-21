@@ -55,6 +55,12 @@ variable "settings" {
   default  = null
 }
 
+variable "is_security_manager" {
+  description = "Whether to add the team as a security manager."
+  type        = bool
+  default     = false
+}
+
 variable "members" {
   description = "A list of members to add to the team."
   type = list(object({

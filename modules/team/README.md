@@ -24,6 +24,7 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [github_organization_security_manager.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/organization_security_manager) | resource |
 | [github_team.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team) | resource |
 | [github_team_members.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_members) | resource |
 | [github_team_membership.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_membership) | resource |
@@ -38,6 +39,7 @@ No modules.
 | <a name="input_create"></a> [create](#input\_create) | Whether to create this module or not. | `bool` | `true` | no |
 | <a name="input_create_default_maintainer"></a> [create\_default\_maintainer](#input\_create\_default\_maintainer) | Adds a default maintainer to the team. Defaults to false and adds the creating user to the team when true. | `bool` | `null` | no |
 | <a name="input_description"></a> [description](#input\_description) | A description of the team. | `string` | n/a | yes |
+| <a name="input_is_security_manager"></a> [is\_security\_manager](#input\_is\_security\_manager) | Whether to add the team as a security manager. | `bool` | `false` | no |
 | <a name="input_ldap_dn"></a> [ldap\_dn](#input\_ldap\_dn) | The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise Server. | `string` | `null` | no |
 | <a name="input_members"></a> [members](#input\_members) | A list of members to add to the team. | <pre>list(object({<br/>    username = string<br/>    role     = optional(string)<br/>  }))</pre> | `[]` | no |
 | <a name="input_members_authoritative"></a> [members\_authoritative](#input\_members\_authoritative) | Whether the members list is authoritative. If true, only the members in the list will be in the team. | `bool` | `false` | no |

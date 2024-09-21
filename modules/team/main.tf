@@ -25,6 +25,12 @@ resource "github_team_settings" "this" {
   }
 }
 
+resource "github_organization_security_manager" "this" {
+  count = var.create && var.is_security_manager ? 1 : 0
+
+  team_slug = github_team.this[0].slug
+}
+
 resource "github_team_membership" "this" {
   for_each = {
     for index, v in var.members_authoritative ? [] : var.members :
