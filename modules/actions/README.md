@@ -1,6 +1,6 @@
 # actions
 
-Submodule for managing GitHub Actions settings, secrets and variables, environments.
+Submodule for managing GitHub Actions settings, secrets and variables.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
