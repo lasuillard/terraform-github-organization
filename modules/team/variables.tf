@@ -12,6 +12,8 @@ variable "name" {
 variable "description" {
   description = "A description of the team."
   type        = string
+  nullable    = true
+  default     = null
 }
 
 variable "privacy" {
