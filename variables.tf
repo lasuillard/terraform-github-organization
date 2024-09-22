@@ -17,7 +17,7 @@ variable "settings" {
     description                                                  = string
     has_organization_projects                                    = optional(bool)
     has_repository_projects                                      = optional(bool)
-    default_repository_permission                                = optional(bool)
+    default_repository_permission                                = optional(string)
     members_can_create_repositories                              = optional(bool)
     members_can_create_public_repositories                       = optional(bool)
     members_can_create_private_repositories                      = optional(bool)
@@ -107,6 +107,8 @@ variable "teams" {
       })))
     }))
   }))
+  nullable = true
+  default  = null
 }
 
 # Repositories
