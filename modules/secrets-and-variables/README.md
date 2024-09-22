@@ -34,7 +34,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_create"></a> [create](#input\_create) | Whether to create this module or not. | `bool` | `true` | no |
-| <a name="input_secrets"></a> [secrets](#input\_secrets) | GitHub Actions secrets for this organization.<br/><br/>- Available values for `subject` are `"actions"`, `"codespaces"`, `"dependabot"`.<br/>- `github_actions_environment_secret` resource will be created if `environment` key specified. | <pre>list(object({<br/>    subjects                = set(string)<br/>    secret_name             = string<br/>    encrypted_value         = optional(string)<br/>    plaintext_value         = optional(string)<br/>    visibility              = string<br/>    selected_repository_ids = optional(set(number))<br/>  }))</pre> | `[]` | no |
+| <a name="input_secrets"></a> [secrets](#input\_secrets) | GitHub Actions secrets for this organization.<br/><br/>- Available values for `subject` are `"actions"`, `"codespaces"`, `"dependabot"`. | <pre>list(object({<br/>    subjects                = set(string)<br/>    secret_name             = string<br/>    encrypted_value         = optional(string)<br/>    plaintext_value         = optional(string)<br/>    visibility              = string<br/>    selected_repository_ids = optional(set(number))<br/>  }))</pre> | `[]` | no |
 | <a name="input_variables"></a> [variables](#input\_variables) | GitHub Actions variables for this organization. | <pre>list(object({<br/>    variable_name           = string<br/>    value                   = optional(string)<br/>    visibility              = string<br/>    selected_repository_ids = optional(set(number))<br/>  }))</pre> | `[]` | no |
 
 ## Outputs

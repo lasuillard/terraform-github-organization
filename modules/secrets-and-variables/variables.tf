@@ -9,7 +9,6 @@ variable "secrets" {
 GitHub Actions secrets for this organization.
 
 - Available values for `subject` are `"actions"`, `"codespaces"`, `"dependabot"`.
-- `github_actions_environment_secret` resource will be created if `environment` key specified.
 EOT
   type = list(object({
     subjects                = set(string)
